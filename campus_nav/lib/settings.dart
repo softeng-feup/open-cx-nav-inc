@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'main.dart';
 import 'drawer.dart';
 
 class Bloc {
@@ -20,15 +19,17 @@ class MySettingsState extends State<MySettings> {
 
   bool darkMode = false;
 
-  void onChanged() {
-    bloc.changeTheme;
+  void onChanged(bool valueReceived) {
+    setState(() {
+      bloc.changeTheme;
+    });
   }
 
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: AppBar(title: Text('Settings'),),
-      drawer: AppDrawer(context),
+      drawer: AppDrawer(),
       body: Container(
         padding: new EdgeInsets.all(32.0),
         child: new Column(
@@ -37,12 +38,7 @@ class MySettingsState extends State<MySettings> {
               title: Text('Dark Mode'),
               activeColor: Colors.white,
               value: darkMode,
-              onChanged: (bool value) { 
-                setState(() {
-                  darkMode = value;
-                  onChanged();
-                }); 
-              },
+              onChanged: (bool value) { onChanged(value); },
             )
           ],
         ),

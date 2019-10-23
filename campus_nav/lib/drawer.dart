@@ -1,17 +1,20 @@
 import 'package:flutter/material.dart';
+
+//Acess to Home Page module
 import 'main.dart';
+//Acess to Profile module
 import 'profile.dart';
+//Acess to Favourites module
 import 'favourites.dart';
-import 'settings.dart';
-import 'help.dart';
+//Acess to Settings module
+//import 'settings.dart';
+//Acess to Help module
+//import 'help.dart';
+
 
 class AppDrawer extends StatelessWidget {
-
-  final context1; //é preciso passar o msm context para build?
-  AppDrawer(this.context1);
-
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) {  
     return Drawer(
       child: ListView(
               children: <Widget>[
@@ -31,8 +34,8 @@ class AppDrawer extends StatelessWidget {
                   onTap: () {
                     Navigator.of(context).pop();
                     Navigator.of(context).push(MaterialPageRoute(
-                      builder: (BuildContext context) => MyHomePage(title: 'Campus NAV')));
-                  },
+                      builder: (BuildContext context) => MyHomePage(title: "Campus NAV",)));
+                  },  
                 ),
                 Divider(thickness: 5,),
                 
@@ -63,10 +66,8 @@ class AppDrawer extends StatelessWidget {
                   leading: Icon(Icons.settings),
                   onTap: () {
                     Navigator.of(context).pop();
-                    Navigator.push(
-                      context, 
-                      MaterialPageRoute(builder: (context) =>MySettings()),
-                    );
+                    //Navigator.of(context).push(MaterialPageRoute(
+                      //builder: (BuildContext context) => MySettings()));
                   },
                 ),
                 Divider(thickness: 5,),
@@ -83,7 +84,7 @@ class AppDrawer extends StatelessWidget {
       ),
     );
   }
-}
 
+}
 
 

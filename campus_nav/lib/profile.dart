@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+
+// Writes/Reads profile settings
+import 'storage.dart';
+//App drawer used in all modules
 import 'drawer.dart';
 
 class MyProfile extends StatefulWidget {
@@ -7,12 +11,12 @@ class MyProfile extends StatefulWidget {
   State <StatefulWidget> createState() => MyProfileState();
 }
 
-class MyProfileState extends State<MyProfile> 
-{
+class MyProfileState extends State<MyProfile> {
   String dropdownValue = 'One';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: AppDrawer(),
       body: Center(
         child: DropdownButton<String>(
           value: dropdownValue,
