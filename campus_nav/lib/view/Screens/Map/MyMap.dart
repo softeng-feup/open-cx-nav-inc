@@ -18,7 +18,7 @@ class MyMap extends StatelessWidget {
     return Scaffold(
         appBar: AppBar( title: Text(title), ),
         body: WebView(
-          initialUrl: 'https://maps.mapwize.io/#/v/venue_feup?k=7df55016372497ab&u=ESOF&l=pt&z=15&embed=true&?follow=true/idk',
+          initialUrl: 'https://www.google.pt/maps/@41.178191,-8.5957875,18.43z',
           javascriptMode: JavascriptMode.unrestricted,
           onWebViewCreated: (WebViewController webViewController) {
             _controller.complete(webViewController);
