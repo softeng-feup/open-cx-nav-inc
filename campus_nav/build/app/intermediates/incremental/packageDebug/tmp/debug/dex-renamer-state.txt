@@ -1,0 +1,4 @@
+#Thu Dec 05 12:29:37 GMT 2019
+base.0=C\:\\GitHub\\ESOF\\campus_nav\\build\\app\\intermediates\\transforms\\dexMerger\\debug\\0
+path.0=classes.dex
+renamed.0=classes.dex
